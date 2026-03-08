@@ -1,23 +1,32 @@
-import midtransClient from "midtrans-client";
+import midtransClient from "midtrans-client"
+import fs from "fs"
 
-export default async function handler(req, res) {
+export default async function handler(req,res){
 
-  const snap = new midtransClient.Snap({
-    isProduction: false,
-    serverKey: process.env.MIDTRANS_SERVER_KEY
-  });
+const price = JSON.parse(
+fs.readFileSync("./config/price.json")
+).price
 
-  const parameter = {
-    transaction_details: {
-      order_id: "order-" + Date.now(),
-      gross_amount: 49000
-    }
-  };
+const snap = new midtransClient.Snap({
 
-  const transaction = await snap.createTransaction(parameter);
+isProduction:false,
+serverKey:process.env.MIDTRANS_SERVER_KEY
 
-  res.status(200).json({
-    token: transaction.token
-  });
+})
+
+const parameter={
+
+transaction_details:{
+
+order_id:"ORDER-"+Date.now(),
+gross_amount:price
+
+}
+
+}
+
+const transaction = await snap.createTransaction(parameter)
+
+res.json({token:transaction.token})
 
 }
