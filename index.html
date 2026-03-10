@@ -7,11 +7,48 @@
 
 <title>Modul Ajar PAUD Kurikulum Merdeka | Siap Pakai</title>
 
-<meta name="description" content="Modul Ajar PAUD Siap Pakai sesuai Kurikulum Merdeka. Praktis, mudah dipahami, dan langsung bisa diterapkan. Promo mulai 49K.">
+<meta name="description" content="Modul Ajar PAUD Siap Pakai sesuai Kurikulum Merdeka. Praktis, mudah dipahami, dan langsung bisa diterapkan. Promo mulai 10K.">
 
 <style>
 
-:root{
+/* FAQ */
+
+.faq-section{
+background:#ffffff;
+padding:60px 20px;
+}
+
+.faq-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.faq-item{
+max-width:800px;
+margin:10px auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.faq-question{
+width:100%;
+padding:18px;
+border:none;
+background:#f4fbf8;
+font-weight:600;
+text-align:left;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+padding:18px;
+background:white;
+line-height:1.6;
+}
+  
+  :root{
 --green:#1f7a63;
 --green-dark:#145c4b;
 --yellow:#ffb703;
@@ -262,7 +299,73 @@ class="btn btn-wa">💬 Konsultasi via WhatsApp</a>
 </section>
 
 
-<!-- PROMO -->
+<!-- FAQ SECTION -->
+
+<section class="faq-section">
+  <div class="container">
+
+    <h2 class="faq-title">Pertanyaan yang Sering Ditanyakan</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah modul ini sesuai Kurikulum Merdeka terbaru?
+      </button>
+      <div class="faq-answer">
+        Ya. Modul disusun berdasarkan capaian pembelajaran PAUD pada Kurikulum Merdeka sehingga mudah diterapkan di kelas.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah modul ini bisa langsung digunakan?
+      </button>
+      <div class="faq-answer">
+        Bisa. Modul sudah lengkap dengan tujuan pembelajaran, aktivitas bermain, dan panduan guru sehingga bisa langsung dipakai tanpa perlu menyusun dari awal.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Setelah membeli apakah modul langsung bisa didownload?
+      </button>
+      <div class="faq-answer">
+        Ya. Setelah pembayaran berhasil, Anda akan langsung mendapatkan link download modul secara otomatis.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah modul ini bisa dipakai berkali-kali?
+      </button>
+      <div class="faq-answer">
+        Tentu. Modul ini dapat digunakan berulang kali untuk kegiatan belajar mengajar di kelas.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah saya bisa bertanya jika mengalami kesulitan?
+      </button>
+      <div class="faq-answer">
+        Anda dapat menghubungi kami melalui WhatsApp untuk konsultasi penggunaan modul.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Apakah modul ini cocok untuk guru pemula?
+      </button>
+      <div class="faq-answer">
+        Sangat cocok. Modul dibuat dengan bahasa sederhana dan panduan langkah demi langkah.
+      </div>
+    </div>
+
+  </div>
+</section>
+  
+  
+  
+  <!-- PROMO -->
 
 <section>
 <div class="container">
@@ -271,7 +374,7 @@ class="btn btn-wa">💬 Konsultasi via WhatsApp</a>
 
 <h2>🎉 PROMO KHUSUS GURU PAUD 🎉</h2>
 
-<div class="price">Mulai 49K</div>
+<div class="price">Mulai 10K</div>
 
 <p>
 ✔ Akses langsung<br>
@@ -381,6 +484,26 @@ window.location.href="https://lynk.id/nnafssh"
 
 </script>
 
+
+<script>
+
+document.querySelectorAll(".faq-question").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const answer=btn.nextElementSibling
+
+if(answer.style.display==="block"){
+answer.style.display="none"
+}else{
+answer.style.display="block"
+}
+
+})
+
+})
+
+</script>
 
 </body>
 </html>
