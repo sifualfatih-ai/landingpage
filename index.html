@@ -116,7 +116,8 @@ opacity:0.95;
 /* HERO */
 
 .hero{
-background:linear-gradient(135deg,var(--green),#2ea58c);
+margin-top:70px;
+background: linear-gradient(135deg, var(--green), #2ea58c);
 color:#fff;
 text-align:center;
 padding-bottom:70px;
@@ -210,12 +211,140 @@ h1{font-size:2rem;}
 h2{font-size:1.6rem;}
 }
 
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#1f7a63;
+padding:12px 20px;
+z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.nav-logo{
+color:white;
+font-weight:700;
+font-size:18px;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.nav-links a:hover{
+opacity:0.8;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+font-size:26px;
+color:white;
+cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:55px;
+left:0;
+width:100%;
+background:#1f7a63;
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+}
+
+.nav-links a{
+padding:10px 0;
+display:block;
+}
+
+.hamburger{
+display:block;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+}
+
+/* FLOATING CTA */
+
+.floating-buy{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ffb703;
+color:black;
+padding:14px 22px;
+border-radius:40px;
+font-weight:700;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+cursor:pointer;
+z-index:999;
+transition:0.3s;
+}
+
+.floating-buy:hover{
+transform:translateY(-2px);
+}
+
+  
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 
+<div class="navbar">
+
+<a href="https://www.nafsflow.com/" class="nav-logo">
+NAFSFLOW
+</a>
+
+<div class="nav-links" id="navLinks">
+
+<a href="https://www.nafsflow.com/home.html">
+MAIN
+</a>
+
+<a href="https://www.nafsflow.com/">
+HOME
+</a>
+
+<a href="#faq">
+FAQ
+</a>
+
+</div>
+
+<div class="hamburger" onclick="toggleMenu()">
+☰
+</div>
+
+</div>
+  
 <!-- HERO -->
 <section class="hero">
 <div class="container">
@@ -504,6 +633,19 @@ answer.style.display="block"
 })
 
 </script>
+<!-- FLOATING BUY BUTTON -->
 
+<div class="floating-buy buy-btn">
+🛒 Order Sekarang
+</div>
+
+  <script>
+
+function toggleMenu(){
+document.getElementById("navLinks").classList.toggle("active")
+}
+
+</script>
+  
 </body>
 </html>
