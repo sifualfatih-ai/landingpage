@@ -240,19 +240,21 @@ transform:translateY(-2px);
 
 .futuristic-navbar{
 position:fixed;
-top:0;
-left:0;
-width:100%;
+top:30px;
+left:50%;
+transform:translateX(-50%);
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:14px 40px;
+justify-content:center;
+padding:10px 30px;
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+
+border-radius:40px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+
 z-index:1000;
-
-background:rgba(31,122,99,0.85);
-backdrop-filter:blur(10px);
-
-box-shadow:0 5px 25px rgba(0,0,0,0.25);
 }
 
 .nav-logo{
@@ -265,7 +267,8 @@ letter-spacing:1px;
 
 .nav-menu{
 display:flex;
-gap:30px;
+gap:40px;
+align-items:center;
 }
 
 .nav-menu a{
@@ -285,42 +288,15 @@ transition:all .3s ease;
 
 .nav-menu a:hover{
 
-background:linear-gradient(45deg,#ffd166,#ffb703);
-color:#1f7a63;
+background:linear-gradient(135deg,#ffd166,#ffb703);
+color:#1c1c1c;
 
-box-shadow:0 0 12px rgba(255,200,0,0.7);
+box-shadow:0 0 20px rgba(255,200,0,0.9);
 
-}
-
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.nav-menu{
-
-position:absolute;
-top:60px;
-right:0;
-background:#1f7a63;
-flex-direction:column;
-width:200px;
-padding:20px;
-
-display:none;
+transform:translateY(-2px);
 
 }
 
-.nav-menu.active{
-display:flex;
-}
-
-.menu-toggle{
-display:block;
-}
-
-}
-  
 </style>
 </head>
 
@@ -346,37 +322,9 @@ HOME
 
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-☰
-</div>
-
 </nav>
   
-<a href="https://www.nafsflow.com/" class="nav-logo">
-NAFSFLOW
-</a>
 
-<div class="nav-links" id="navLinks">
-
-<a href="https://www.nafsflow.com/home.html">
-MAIN
-</a>
-
-<a href="https://www.nafsflow.com/">
-HOME
-</a>
-
-<a href="#faq">
-FAQ
-</a>
-
-</div>
-
-<div class="hamburger" onclick="toggleMenu()">
-☰
-</div>
-
-</div>
   
 <!-- HERO -->
 <section class="hero">
@@ -673,14 +621,6 @@ answer.style.display="block"
    target="_blank">
 🛒 Order Sekarang
 </a>
-
-  <script>
-
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("active")
-}
-
-</script>
 
 <script>
 
