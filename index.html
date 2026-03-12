@@ -118,9 +118,9 @@ opacity:0.95;
 .hero{
 margin-top:70px;
 background: linear-gradient(135deg, var(--green), #2ea58c);
-color:#fff;
-text-align:center;
-padding-bottom:70px;
+color: #fff;
+text-align: center;
+padding-bottom: 70px;
 }
 
 .badge{
@@ -309,16 +309,131 @@ transition:0.3s;
 transform:translateY(-2px);
 }
 
+
+/* ===== FUTURISTIC NAVBAR ===== */
+
+.futuristic-navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 40px;
+z-index:1000;
+
+background:rgba(31,122,99,0.85);
+backdrop-filter:blur(10px);
+
+box-shadow:0 5px 25px rgba(0,0,0,0.25);
+}
+
+.nav-logo{
+font-weight:700;
+color:white;
+text-decoration:none;
+font-size:18px;
+letter-spacing:1px;
+}
+
+.nav-menu{
+display:flex;
+gap:30px;
+}
+
+.nav-menu a{
+
+text-decoration:none;
+color:white;
+font-weight:600;
+font-size:14px;
+letter-spacing:1px;
+
+padding:8px 18px;
+border-radius:25px;
+
+transition:all .3s ease;
+
+}
+
+.nav-menu a:hover{
+
+background:linear-gradient(45deg,#ffd166,#ffb703);
+color:#1f7a63;
+
+box-shadow:0 0 12px rgba(255,200,0,0.7);
+
+}
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+font-size:26px;
+color:white;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-menu{
+
+position:absolute;
+top:60px;
+right:0;
+background:#1f7a63;
+flex-direction:column;
+width:200px;
+padding:20px;
+
+display:none;
+
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
   
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- FUTURISTIC NAVBAR -->
 
-<div class="navbar">
+<nav class="futuristic-navbar">
 
+<a href="https://www.nafsflow.com/" class="nav-logo">
+NAFSFLOW
+</a>
+
+<div class="nav-menu" id="navMenu">
+
+<a href="https://www.nafsflow.com/">
+MAIN
+</a>
+
+<a href="https://www.nafsflow.com/home.html">
+HOME
+</a>
+
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+</nav>
+  
 <a href="https://www.nafsflow.com/" class="nav-logo">
 NAFSFLOW
 </a>
@@ -648,6 +763,15 @@ document.getElementById("navLinks").classList.toggle("active")
 }
 
 </script>
-  
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("navMenu").classList.toggle("active")
+
+}
+
+</script>  
 </body>
 </html>
