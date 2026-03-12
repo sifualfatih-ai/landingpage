@@ -116,11 +116,13 @@ opacity:0.95;
 /* HERO */
 
 .hero{
-margin-top:70px;
+margin-top:0;
+padding-top:120px;
+
 background: linear-gradient(135deg, var(--green), #2ea58c);
-color: #fff;
-text-align: center;
-padding-bottom: 70px;
+color:#fff;
+text-align:center;
+padding-bottom:70px;
 }
 
 .badge{
@@ -240,19 +242,19 @@ transform:translateY(-2px);
 
 .futuristic-navbar{
 position:fixed;
-top:30px;
+top:20px;
 left:50%;
 transform:translateX(-50%);
 display:flex;
 justify-content:center;
-padding:10px 30px;
+padding:12px 40px;
 
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
+background:rgba(31,122,99,0.45); /* hijau tosca transparan */
+backdrop-filter:blur(14px);
 
-border-radius:40px;
+border-radius:50px;
 
-box-shadow:0 10px 40px rgba(0,0,0,0.3);
+box-shadow:0 10px 35px rgba(0,0,0,0.25);
 
 z-index:1000;
 }
@@ -272,18 +274,12 @@ align-items:center;
 }
 
 .nav-menu a{
-
-text-decoration:none;
 color:white;
+text-decoration:none;
 font-weight:600;
-font-size:14px;
 letter-spacing:1px;
-
-padding:8px 18px;
-border-radius:25px;
-
-transition:all .3s ease;
-
+padding:8px 16px;
+border-radius:20px;
 }
 
 .nav-menu a:hover{
@@ -305,10 +301,6 @@ transform:translateY(-2px);
 <!-- FUTURISTIC NAVBAR -->
 
 <nav class="futuristic-navbar">
-
-<a href="https://www.nafsflow.com/" class="nav-logo">
-NAFSFLOW
-</a>
 
 <div class="nav-menu" id="navMenu">
 
