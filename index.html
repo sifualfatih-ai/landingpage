@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="id">
 <head>
 
@@ -11,44 +11,7 @@
 
 <style>
 
-/* FAQ */
-
-.faq-section{
-background:#ffffff;
-padding:60px 20px;
-}
-
-.faq-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.faq-item{
-max-width:800px;
-margin:10px auto;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.faq-question{
-width:100%;
-padding:18px;
-border:none;
-background:#f4fbf8;
-font-weight:600;
-text-align:left;
-cursor:pointer;
-}
-
-.faq-answer{
-display:none;
-padding:18px;
-background:white;
-line-height:1.6;
-}
-  
-  :root{
+:root{
 --green:#1f7a63;
 --green-dark:#145c4b;
 --yellow:#ffb703;
@@ -76,6 +39,8 @@ padding:50px 20px;
 max-width:1100px;
 margin:auto;
 }
+
+/* IMAGE */
 
 img{
 max-width:100%;
@@ -116,9 +81,7 @@ opacity:0.95;
 /* HERO */
 
 .hero{
-margin-top:0;
 padding-top:120px;
-
 background: linear-gradient(135deg, var(--green), #2ea58c);
 color:#fff;
 text-align:center;
@@ -134,16 +97,16 @@ font-size:0.9rem;
 margin-bottom:15px;
 }
 
-/* GRID */
+/* FEATURES */
 
-.grid{
+.features-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:20px;
 margin-top:30px;
 }
 
-.card{
+.feature-card{
 background:#fff;
 padding:25px;
 border-radius:18px;
@@ -174,7 +137,95 @@ color:#fff;
 text-align:center;
 }
 
-/* POPUP */
+/* FAQ */
+
+.faq-section{
+background:#ffffff;
+padding:60px 20px;
+}
+
+.faq-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.faq-item{
+max-width:800px;
+margin:10px auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.faq-question{
+width:100%;
+padding:18px;
+border:none;
+background:#f4fbf8;
+font-weight:600;
+text-align:left;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+padding:18px;
+background:white;
+}
+
+/* NAVBAR */
+
+.futuristic-navbar{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+justify-content:center;
+padding:10px 30px;
+background:rgba(31,122,99,0.45);
+backdrop-filter:blur(14px);
+border-radius:50px;
+box-shadow:0 10px 35px rgba(0,0,0,0.25);
+z-index:1000;
+}
+
+.nav-menu{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+.futuristic-navbar .nav-menu a{
+color:white;
+text-decoration:none;
+font-weight:600;
+font-size:12px;
+padding:6px 10px;
+border-radius:20px;
+}
+
+.futuristic-navbar .nav-menu a:hover{
+background:linear-gradient(135deg,#ffd166,#ffb703);
+color:#1c1c1c;
+}
+
+/* FLOATING CTA */
+
+.floating-buy{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ffb703;
+color:black;
+padding:14px 22px;
+border-radius:40px;
+font-weight:700;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+/* MODAL */
 
 .modal{
 display:none;
@@ -208,122 +259,20 @@ color:red;
 font-weight:bold;
 }
 
-@media(max-width:600px){
-h1{font-size:2rem;}
-h2{font-size:1.6rem;}
-}
-
-/* NAVBAR */
-
-
-/* FLOATING CTA */
-
-.floating-buy{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#ffb703;
-color:black;
-padding:14px 22px;
-border-radius:40px;
-font-weight:700;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
-cursor:pointer;
-z-index:999;
-transition:0.3s;
-}
-
-.floating-buy:hover{
-transform:translateY(-2px);
-}
-
-
-/* ===== FUTURISTIC NAVBAR ===== */
-
-.futuristic-navbar{
-position:fixed;
-top:20px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-justify-content:center;
-padding:12px 40px;
-
-background:rgba(31,122,99,0.45); /* hijau tosca transparan */
-backdrop-filter:blur(14px);
-
-border-radius:50px;
-
-box-shadow:0 10px 35px rgba(0,0,0,0.25);
-
-z-index:1000;
-}
-
-.nav-logo{
-font-weight:700;
-color:white;
-text-decoration:none;
-font-size:18px;
-letter-spacing:1px;
-}
-
-.nav-menu{
-display:flex;
-gap:40px;
-align-items:center;
-}
-
-.nav-menu a{
-color:white;
-text-decoration:none;
-font-weight:600;
-font-size:12px;
-letter-spacing:0px;
-padding:6px 10px;
-border-radius:20px;
-}
-
-.nav-menu a:hover{
-
-background:linear-gradient(135deg,#ffd166,#ffb703);
-color:#1c1c1c;
-
-box-shadow:0 0 20px rgba(255,200,0,0.9);
-
-transform:translateY(-2px);
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- FUTURISTIC NAVBAR -->
-
+<!-- NAVBAR -->
 <nav class="futuristic-navbar">
-
-<div class="nav-menu" id="navMenu">
-
-<a href="https://www.nafsflow.com/">
-MAIN
-</a>
-
-<a href="https://www.nafsflow.com/home.html">
-HOME
-</a>
-  
-<a href="https://guru.nafsflow.com/">
-Tools
-</a>
-
-
+<div class="nav-menu">
+<a href="https://www.nafsflow.com/">MAIN</a>
+<a href="https://www.nafsflow.com/home.html">HOME</a>
+<a href="https://guru.nafsflow.com/">Tools</a>
 </div>
-
 </nav>
-  
 
-  
 <!-- HERO -->
 <section class="hero">
 <div class="container">
@@ -332,241 +281,75 @@ Tools
 
 <h1>Modul Ajar PAUD Siap Pakai</h1>
 
-<p>
-Solusi praktis guru PAUD agar mengajar lebih terarah, kreatif,
-dan menyenangkan tanpa ribet menyusun modul sendiri.
-</p>
+<p>Solusi praktis guru PAUD agar mengajar lebih terarah dan menyenangkan tanpa ribet.</p>
 
-<img src="banner-paudd.webp" alt="Modul Ajar PAUD Kurikulum Merdeka">
+<img src="banner-paudd.webp">
 
-<section class="hero">
-<div class="container">
-  
-<p>
-<div class="badge">✨ Paket All in One : Free Akses Tools RPM-RPPM-RPPH-PROMES selama 14 hari ✨</div>
-</p>  
-  
-<a href="https://wa.me/6285134882357?text=Halo%20saya%20ingin%20bertanya%20tentang%20Modul%20Ajar%20PAUD"
-class="btn btn-wa">💬 Konsultasi via WhatsApp</a>
+<div class="badge">✨ Free akses tools selama 14 hari ✨</div>
 
-<button class="btn btn-lynk buy-btn">🛒 Beli Langsung Sekarang</button>
+<a href="https://wa.me/6285134882357" class="btn btn-wa">💬 Konsultasi</a>
+<button class="btn btn-lynk buy-btn">🛒 Beli Sekarang</button>
 
 </div>
 </section>
 
-
 <!-- PROBLEM -->
-
 <section>
 <div class="container">
 
-<h2>Guru PAUD Sering Mengalami Ini?</h2>
+<h2>Masalah Guru PAUD</h2>
 
 <ul>
-<li>❌ Bingung menyusun modul Kurikulum Merdeka</li>
-<li>❌ Waktu habis untuk administrasi</li>
+<li>❌ Bingung menyusun modul</li>
+<li>❌ Waktu habis untuk admin</li>
 <li>❌ Anak cepat bosan</li>
 <li>❌ Modul terlalu ribet</li>
 </ul>
 
-<p><strong>Modul ini dibuat khusus untuk menjawab masalah tersebut.</strong></p>
-
 </div>
 </section>
-
 
 <!-- SOLUTION -->
-
 <section>
 <div class="container">
 
-<h2>Kenapa Modul Ini Sangat Membantu?</h2>
+<h2>Kenapa Modul Ini Membantu?</h2>
 
-<div class="grid">
-
-<div class="card">✅ Siap pakai & terstruktur</div>
-<div class="card">✅ Hemat waktu guru</div>
-<div class="card">✅ Selaras CP & fase PAUD</div>
-<div class="card">✅ Mudah dipahami</div>
-
+<div class="features-grid">
+<div class="feature-card">✅ Siap pakai</div>
+<div class="feature-card">✅ Hemat waktu</div>
+<div class="feature-card">✅ Sesuai kurikulum</div>
+<div class="feature-card">✅ Mudah dipahami</div>
 </div>
 
 </div>
 </section>
 
-
-<!-- CONTENT -->
-
-<section>
-<div class="container">
-
-<h2>Apa yang Anda Dapatkan?</h2>
-
-<ul>
-<li>📘 Tujuan pembelajaran PAUD</li>
-<li>🎨 Aktivitas bermain & kreatif</li>
-<li>🧠 Stimulus kognitif & sosial</li>
-<li>📝 Evaluasi sederhana</li>
-<li>👩‍🏫 Panduan guru step by step</li>
-</ul>
-
-</div>
-</section>
-
-
-<!-- FAQ SECTION -->
-
-<section class="faq-section">
-  <div class="container">
-
-    <h2 class="faq-title">Pertanyaan yang Sering Ditanyakan</h2>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Apakah modul ini sesuai Kurikulum Merdeka terbaru?
-      </button>
-      <div class="faq-answer">
-        Ya. Modul disusun berdasarkan capaian pembelajaran PAUD pada Kurikulum Merdeka sehingga mudah diterapkan di kelas.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Apakah modul ini bisa langsung digunakan?
-      </button>
-      <div class="faq-answer">
-        Bisa. Modul sudah lengkap dengan tujuan pembelajaran, aktivitas bermain, dan panduan guru sehingga bisa langsung dipakai tanpa perlu menyusun dari awal.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Setelah membeli apakah modul langsung bisa didownload?
-      </button>
-      <div class="faq-answer">
-        Ya. Setelah pembayaran berhasil, Anda akan langsung mendapatkan link download modul secara otomatis.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Apakah modul ini bisa dipakai berkali-kali?
-      </button>
-      <div class="faq-answer">
-        Tentu. Modul ini dapat digunakan berulang kali untuk kegiatan belajar mengajar di kelas.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Apakah saya bisa bertanya jika mengalami kesulitan?
-      </button>
-      <div class="faq-answer">
-        Anda dapat menghubungi kami melalui WhatsApp untuk konsultasi penggunaan modul.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Apakah modul ini cocok untuk guru pemula?
-      </button>
-      <div class="faq-answer">
-        Sangat cocok. Modul dibuat dengan bahasa sederhana dan panduan langkah demi langkah.
-      </div>
-    </div>
-
-  </div>
-</section>
-  
-  
-  
-  <!-- PROMO -->
-
+<!-- PROMO -->
 <section>
 <div class="container">
 
 <div class="promo">
-
-<h2>🎉 PROMO KHUSUS GURU PAUD 🎉</h2>
-
+<h2>Promo Spesial</h2>
 <div class="price">Mulai 10K</div>
 
-<p>
-✔ Akses langsung<br>
-✔ Bisa dipakai berulang<br>
-✔ Promo terbatas
-</p>
-
-<button class="btn btn-lynk buy-btn">
-🛒 Beli via Lynk
-</button>
-
-<a href="https://wa.me/6285134882357?text=Halo%20saya%20ingin%20order%20Modul%20Ajar%20PAUD"
-class="btn btn-wa">
-💬 Order via WhatsApp
-</a>
+<button class="btn btn-lynk buy-btn">Beli Sekarang</button>
+<a href="https://wa.me/6285134882357" class="btn btn-wa">WhatsApp</a>
 
 </div>
 
 </div>
 </section>
 
-
-<!-- FINAL CTA -->
-
-<section class="final">
-<div class="container">
-
-<h2>Jangan Tunda Lagi</h2>
-
-<p>
-Guru hebat butuh modul yang tepat.  
-Amankan modul ajar PAUD sekarang juga.
-</p>
-
-<button class="btn btn-lynk buy-btn">
-👉 Beli Sekarang
-</button>
-
-<a href="https://wa.me/6285134882357" class="btn btn-wa">
-💬 Chat WhatsApp
-</a>
-
-</div>
-
-<div class="footer" style="margin-top:40px">
-Powered by <a href="https://nafsflow.com" style="color:#fff">Nafsflow</a>
-</div>
-
-</section>
-
-
-
-<!-- POPUP -->
-
+<!-- MODAL -->
 <div id="paymentModal" class="modal">
-
 <div class="modal-box">
-
 <div class="close" onclick="closeModal()">✕</div>
-
-<h3>Download Modul PAUD</h3>
-
-<p>Silakan lanjutkan pembayaran</p>
-
-<div id="priceText" class="modal-price">
-Loading...
+<h3>Checkout</h3>
+<div id="priceText" class="modal-price">Loading...</div>
+<button id="payButton" class="btn btn-lynk">Bayar</button>
 </div>
-
-<button id="payButton" class="btn btn-lynk">
-Bayar Sekarang
-</button>
-
 </div>
-
-</div>
-
-
 
 <script>
 
@@ -576,22 +359,16 @@ fetch("config.json")
 .then(res=>res.json())
 .then(data=>{
 priceData=data
-document.getElementById("priceText").innerText=
-"Rp "+data.price.toLocaleString("id-ID")
+document.getElementById("priceText").innerText="Rp "+data.price.toLocaleString("id-ID")
 })
-
 
 document.querySelectorAll(".buy-btn").forEach(btn=>{
-btn.onclick=()=>{
-document.getElementById("paymentModal").style.display="block"
-}
+btn.onclick=()=>document.getElementById("paymentModal").style.display="block"
 })
-
 
 function closeModal(){
 document.getElementById("paymentModal").style.display="none"
 }
-
 
 document.getElementById("payButton").onclick=()=>{
 window.location.href="https://lynk.id/nnafssh"
@@ -599,42 +376,5 @@ window.location.href="https://lynk.id/nnafssh"
 
 </script>
 
-
-<script>
-
-document.querySelectorAll(".faq-question").forEach(btn=>{
-
-btn.addEventListener("click",()=>{
-
-const answer=btn.nextElementSibling
-
-if(answer.style.display==="block"){
-answer.style.display="none"
-}else{
-answer.style.display="block"
-}
-
-})
-
-})
-
-</script>
-<!-- FLOATING ORDER BUTTON -->
-
-<a href="https://lynk.id/nnafssh"
-   class="floating-buy"
-   target="_blank">
-🛒 Order Sekarang
-</a>
-
-<script>
-
-function toggleMenu(){
-
-document.getElementById("navMenu").classList.toggle("active")
-
-}
-
-</script>  
 </body>
 </html>
